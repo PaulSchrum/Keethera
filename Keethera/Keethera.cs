@@ -26,6 +26,7 @@ namespace Keethera
         public static KeetheraInstance Start(string pathToHiddenConsole, 
             Action<KeetheraInstance, string> messageReceiver)
         {
+            bool startHidden = false;
             string openPath = ComposeFileName(pathToHiddenConsole, hiddenConsoleExePath); 
             namedPipeGuid = Guid.NewGuid();
             var currentProcess = HashableProcess.FromCurrentProcess();
@@ -33,18 +34,28 @@ namespace Keethera
             if(consoleProcess is null)
             {  // start the hidden console process.
                 consoleProcess = new HashableProcess();
-                consoleProcess.StartInfo.FileName = ComposeFileName(pathToHiddenConsole, hiddenConsoleName + ".exe");            
+                consoleProcess.StartInfo.FileName = ComposeFileName(pathToHiddenConsole, hiddenConsoleName + ".exe");
                 consoleProcess.StartInfo.Arguments = $"{currentProcess.Id.ToString()} {namedPipeGuid}";
-                consoleProcess.StartInfo.WindowStyle = ProcessWindowStyle.Hidden;
-                consoleProcess.StartInfo.CreateNoWindow = true;
                 consoleProcess.StartInfo.UseShellExecute = false;
                 consoleProcess.StartInfo.RedirectStandardInput = true;
                 consoleProcess.StartInfo.RedirectStandardOutput = true;
                 consoleProcess.StartInfo.RedirectStandardError = true;
                 consoleProcess.StartInfo.LoadUserProfile = false;
+                if (startHidden)
+                {
+                    consoleProcess.StartInfo.WindowStyle = ProcessWindowStyle.Hidden;
+                    consoleProcess.StartInfo.CreateNoWindow = true;
+                }
+                else
+                {
+                    // Start the visible console process.
+                    consoleProcess.StartInfo.WindowStyle = ProcessWindowStyle.Normal; // Changed from Hidden to Normal
+                    consoleProcess.StartInfo.CreateNoWindow = false; // Changed from true to false
+
+                }
 
                 consoleProcess.Start();
-            }  // unfinished below this line.
+            }
             else
             {  // connect to the hidden console process.
                //                KeetheraProcessID = consoleProcess.Id;
