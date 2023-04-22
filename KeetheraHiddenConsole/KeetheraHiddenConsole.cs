@@ -1,6 +1,6 @@
 ﻿namespace KeetheraHiddenConsole
 {
-    internal class Program
+    internal class KeetheraHiddenConsole
     {
         static void Main(string[] args)
         {

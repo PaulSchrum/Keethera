@@ -22,7 +22,6 @@ namespace Keethera
         /// <param name="pathToHiddenConsole">Path (only) where to find KeetheraHiddenConsole.exe</param>
         /// <param name="messageReceiver">Method in your app that will receive messages.</param>
         /// <returns></returns>
-        /// <exception cref="NotImplementedException"></exception>
         public static KeetheraInstance Start(string pathToHiddenConsole, 
             Action<KeetheraInstance, string> messageReceiver)
         {

@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33516.290
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Keethera", "Keethera\Keethera.csproj", "{D3E44AAF-968A-40AC-A197-D11D397F9D5C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Keethera", "Keethera\Keethera.csproj", "{D3E44AAF-968A-40AC-A197-D11D397F9D5C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KeetheraHiddenConsole", "KeetheraHiddenConsole\KeetheraHiddenConsole.csproj", "{C0C9E970-2404-477D-8C6C-D1B64260909E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExampleConsoleApp1", "ExampleConsoleApp1\ExampleConsoleApp1.csproj", "{970F8E53-581C-42EB-8FCC-0ED4FCA32CA2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{D3E44AAF-968A-40AC-A197-D11D397F9D5C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D3E44AAF-968A-40AC-A197-D11D397F9D5C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D3E44AAF-968A-40AC-A197-D11D397F9D5C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C0C9E970-2404-477D-8C6C-D1B64260909E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C0C9E970-2404-477D-8C6C-D1B64260909E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C0C9E970-2404-477D-8C6C-D1B64260909E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C0C9E970-2404-477D-8C6C-D1B64260909E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{970F8E53-581C-42EB-8FCC-0ED4FCA32CA2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{970F8E53-581C-42EB-8FCC-0ED4FCA32CA2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{970F8E53-581C-42EB-8FCC-0ED4FCA32CA2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{970F8E53-581C-42EB-8FCC-0ED4FCA32CA2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
