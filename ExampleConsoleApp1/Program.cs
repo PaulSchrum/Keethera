@@ -14,8 +14,8 @@ namespace ExampleConsoleApp1
         static async Task Main(string[] args)
         {
             Console.WriteLine("Example Console App 1 started.");
-            //messageHandling =
-            //    Keethera.Keethera.Start(KeetheraPath, incomingMessageHandler);
+            messageHandling =
+                Keethera.Keethera.Start(KeetheraPath, incomingMessageHandler);
 
             Random random = new Random();
             while(true)
